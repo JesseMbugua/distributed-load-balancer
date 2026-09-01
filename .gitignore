@@ -1,0 +1,14 @@
+cd ~/distributed-load-balancer
+cat << 'EOF' > .gitignore
+# Virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Docker and test data
+analysis/*.json
+analysis/*.png
+.DS_Store
+EOF

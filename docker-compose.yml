@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  load_balancer:
+    build:
+      context: ./load_balancer
+    container_name: load_balancer
+    ports:
+      - "5000:5000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    privileged: true
+    networks:
+      - net1
+
+networks:
+  net1:
+    external: true
